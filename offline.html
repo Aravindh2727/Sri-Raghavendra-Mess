@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline - Sri Raghavendra Mess</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .offline-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #ff8c42, #ffb347);
+            color: white;
+            padding: 20px;
+        }
+        .offline-content {
+            max-width: 500px;
+        }
+        .offline-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: white;
+            color: #ff8c42;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        @media (max-width: 480px) {
+            h1 { font-size: 2rem; }
+            p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="offline-container">
+        <div class="offline-content">
+            <div class="offline-icon">📶</div>
+            <h1>You're Offline</h1>
+            <p>Please check your internet connection. Sri Raghavendra Mess will be back when you're online.</p>
+            <p>In the meantime, you can:</p>
+            <p>📍 Visit us: No.798, Chairman Govindaraj Street, Villupuram</p>
+            <p>📞 Call us: +91 8056108207</p>
+            <a href="/" class="btn">Try Again</a>
+        </div>
+    </div>
+</body>
+</html>

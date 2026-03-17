@@ -1,0 +1,44 @@
+# robots.txt for Sri Raghavendra Mess Website
+# https://www.sriraghavendramess.com/
+
+# Allow all crawlers to index the site
+User-agent: *
+Allow: /
+
+# Disallow admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cgi-bin/
+
+# Specify sitemap location
+Sitemap: https://www.sriraghavendramess.com/sitemap.xml
+
+# Crawl delay for polite bots
+Crawl-delay: 5
+
+# Allow Googlebot to crawl everything
+User-agent: Googlebot
+Allow: /
+
+# Allow Googlebot-Image to crawl all images
+User-agent: Googlebot-Image
+Allow: /
+
+# Allow Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Allow Yandex
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# Disallow Baidu from crawling certain paths
+User-agent: Baiduspider
+Disallow: /assest/
+Disallow: /*.js$
+Disallow: /*.css$
+
+# Host directive
+Host: https://www.sriraghavendramess.com

@@ -1,0 +1,185 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "name": "Idli (3 pcs)",
+      "price": 30,
+      "description": "Soft steamed rice cakes served with sambar and chutney",
+      "category": "morning",
+      "available": true,
+      "image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "id": 2,
+      "name": "Masala Dosa",
+      "price": 50,
+      "description": "Crispy dosa filled with spiced potato masala",
+      "category": "morning",
+      "available": true,
+      "image": "https://i.pinimg.com/1200x/5e/52/3c/5e523c096c8f4d6d9ef0cb063a4e952c.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Pongal",
+      "price": 35,
+      "description": "Traditional rice and lentil dish with ghee and cashews",
+      "category": "morning",
+      "available": true,
+      "image": "https://i.pinimg.com/1200x/af/59/2f/af592f28d3940c409f669b8c241e9d68.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Medhu Vada (1 pcs)",
+      "price": 10,
+      "description": "Crispy lentil donuts served with sambar and chutney",
+      "category": "evening",
+      "available": true,
+      "image": "https://i.pinimg.com/1200x/64/0b/a5/640ba5b138187426cff39d00da75c1ee.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Poori",
+      "price": 40,
+      "description": "Deep-fried wheat bread that is soft, fluffy, and crispy",
+      "category": "morning",
+      "available": true,
+      "image": "https://i.pinimg.com/736x/e2/79/15/e27915bc55788d40ac2617400497665c.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Sambar Rice",
+      "price": 35,
+      "description": "Rice mixed with flavorful sambar",
+      "category": "afternoon",
+      "available": true,
+      "image": "https://i.pinimg.com/736x/e9/71/6d/e9716d7c3518d64b26a192d9418b1a3f.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Lemon Rice",
+      "price": 35,
+      "description": "Tangy rice with peanuts and curry leaves",
+      "category": "afternoon",
+      "available": true,
+      "image": "https://i.pinimg.com/736x/59/72/6f/59726fe85513e1b8f7462d6b9b27b50a.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Curd Rice",
+      "price": 35,
+      "description": "Cool yogurt rice with pomegranate",
+      "category": "afternoon",
+      "available": true,
+      "image": "https://i.pinimg.com/736x/b9/f8/fc/b9f8fc30887f028ca72e68e134068e4e.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Veg Biriyani",
+      "price": 40,
+      "description": "Aromatic basmati rice cooked with mixed vegetables and spices",
+      "category": "afternoon",
+      "available": true,
+      "image": "https://i.pinimg.com/1200x/d0/97/56/d09756d029b6a0926b8fbacccbe386f7.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Tomato Rice",
+      "price": 35,
+      "description": "Flavored rice cooked with tangy tomatoes and aromatic spices",
+      "category": "afternoon",
+      "available": true,
+      "image": "https://i.pinimg.com/1200x/16/3a/fa/163afa939301d61a58efa3eb6f003dff.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Masal Vadai",
+      "price": 10,
+      "description": "Crispy deep-fried lentil fritters flavored with spices and herbs",
+      "category": "evening",
+      "available": true,
+      "image": "https://i.pinimg.com/736x/66/f2/0b/66f20bb837a0a48016c0126f257b3507.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Puthina Rice",
+      "price": 35,
+      "description": "Flavorful mint rice with spices",
+      "category": "afternoon",
+      "available": true,
+      "image": "https://i.pinimg.com/736x/28/40/fa/2840fad8bfdd8ff7defce43e30d18501.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Puli Sadam",
+      "price": 35,
+      "description": "Traditional tamarind rice with peanuts",
+      "category": "afternoon",
+      "available": true,
+      "image": "https://i.pinimg.com/1200x/5f/a8/2e/5fa82ece77fa55074523bcb028225134.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Ragi Simili (1 pcs)",
+      "price": 10,
+      "description": "Crispy pastry with spiced potato filling",
+      "category": "evening",
+      "available": true,
+      "image": "https://i.pinimg.com/736x/c9/e8/59/c9e859bcccee41570d462b484637124a.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Juice",
+      "price": 40,
+      "description": "Freshly prepared seasonal fruit juice",
+      "category": "juice",
+      "available": true,
+      "image": "https://i.pinimg.com/1200x/ee/df/d5/eedfd5e42c0d362a0f3881252f7dee61.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Coffee",
+      "price": 15,
+      "description": "Traditional South Indian filter coffee",
+      "category": "tea",
+      "available": true,
+      "image": "https://i.pinimg.com/736x/95/d1/9a/95d19a7cad652dd1caceb091c9794ac9.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Tea",
+      "price": 12,
+      "description": "Spiced Indian tea",
+      "category": "tea",
+      "available": true,
+      "image": "https://i.pinimg.com/736x/35/8e/6e/358e6e35f65035a7d3f68d923b9626cc.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Green Tea",
+      "price": 20,
+      "description": "Healthy green tea with lemon",
+      "category": "tea",
+      "available": true,
+      "image": "https://i.pinimg.com/736x/d3/85/ce/d385ce2cabe96a724807459a4190ea42.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Lemon Tea",
+      "price": 15,
+      "description": "Refreshing tea with lemon flavor",
+      "category": "tea",
+      "available": true,
+      "image": "https://i.pinimg.com/736x/bf/03/f0/bf03f056e43789b5f50924d506912135.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Order for Festivals and Events",
+      "price": 0,
+      "client": "Bulk Order Client",
+      "description": "Bulk order includes Pongal, Poori, Veg Biriyani, Tomato Rice, Masal Vadai, Idli, Dosa, Curd Rice, and Gulab Jamun, providing a complete combination of breakfast, lunch, snacks, and dessert items suitable for catering",
+      "category": "bulk",
+      "available": true,
+      "image": "https://i.pinimg.com/webp/736x/a2/60/99/a260995638f3e959468bc331e9f05894.webp"
+    }
+  ]
+}
