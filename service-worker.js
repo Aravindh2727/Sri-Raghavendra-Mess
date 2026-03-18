@@ -5,7 +5,7 @@
 const CACHE_NAME = 'sri-raghavendra-mess-v1';
 const OFFLINE_URL = 'offline.html';
 
-// Assets to cache on install (core files)
+// Assets to cache on install (core files) 
 const CORE_ASSETS = [
   '/',
   '/index.html',
