@@ -198,6 +198,11 @@ const menuData = [
 // Global variables
 let currentFilter = 'all';
 let searchTerm = '';
+const debugError = (...args) => {
+    if (window && window.DEBUG_MODE) {
+        console.error(...args);
+    }
+};
 
 // DOM Elements
 document.addEventListener('DOMContentLoaded', () => {
@@ -404,7 +409,7 @@ async function handleBulkOrder(e) {
         showToast('Bulk order submitted successfully! We will contact you shortly.');
         e.target.reset();
     } catch (error) {
-        console.error('Error submitting bulk order:', error);
+        debugError('Error submitting bulk order:', error);
         
         // Fallback: Save locally if Firebase fails
         saveToLocalStorage('bulkOrders', formData);
@@ -446,7 +451,7 @@ async function handleContactForm(e) {
         showToast('Message sent successfully! We will get back to you soon.');
         e.target.reset();
     } catch (error) {
-        console.error('Error submitting contact form:', error);
+        debugError('Error submitting contact form:', error);
         
         // Fallback: Save locally if Firebase fails
         saveToLocalStorage('contacts', formData);
@@ -470,7 +475,7 @@ function saveToLocalStorage(collection, data) {
         });
         localStorage.setItem(collection, JSON.stringify(existing));
     } catch (error) {
-        console.error('Error saving to localStorage:', error);
+        debugError('Error saving to localStorage:', error);
     }
 }
 
@@ -564,7 +569,7 @@ async function syncLocalData() {
             try {
                 await db.collection('bulkOrders').add(order);
             } catch (error) {
-                console.error('Error syncing bulk order:', error);
+                debugError('Error syncing bulk order:', error);
             }
         }
         localStorage.removeItem('bulkOrders');
