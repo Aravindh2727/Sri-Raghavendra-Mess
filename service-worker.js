@@ -3,19 +3,17 @@
 // Fixed navigation preload error and offline support
 
 const CACHE_NAME = 'sri-raghavendra-mess-v1';
-const OFFLINE_URL = './offline.html';
+const OFFLINE_URL = 'offline.html';
 
 // Assets to cache on install (core files)
-// NOTE: Use relative paths so it works on GitHub Pages project sites
-// (e.g., https://username.github.io/repo/) instead of only the root domain.
 const CORE_ASSETS = [
-  './',
-  './index.html',
-  './style.css',
-  './app.js',
-  './firebase.js',
-  './whatsapp.js',
-  './offline.html',
+  '/',
+  '/index.html',
+  '/style.css',
+  '/app.js',
+  '/firebase.js',
+  '/whatsapp.js',
+  '/offline.html',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css',
   'https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js',
   'https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore-compat.js'
@@ -92,17 +90,23 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
       (async () => {
         try {
-          // Use navigation preload if available; wait for it to settle to avoid cancellation warnings
-          const preloadResponse = await event.preloadResponse;
-
+          // FIXED: Properly handle preloadResponse with Promise.race
+          const preloadResponse = await Promise.race([
+            // Try to get preload response with timeout to prevent hanging
+            event.preloadResponse,
+            new Promise(resolve => setTimeout(resolve, 3000)) // 3 second timeout
+          ]);
+          
+          // If preload worked and we got a response, use it
           if (preloadResponse) {
             console.log('[Service Worker] Using preloaded response for:', event.request.url);
             return preloadResponse;
           }
-
+          
           // Otherwise try network
-          console.log('[Service Worker] No preload, trying network for:', event.request.url);
-          return await fetch(event.request);
+          console.log('[Service Worker] Preload failed, trying network for:', event.request.url);
+          const networkResponse = await fetch(event.request);
+          return networkResponse;
           
         } catch (error) {
           console.log('[Service Worker] Network failed, using cache for:', event.request.url, error);
