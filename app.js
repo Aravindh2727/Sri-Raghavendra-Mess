@@ -519,14 +519,9 @@ window.addEventListener('scroll', () => {
 function registerServiceWorker() {
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-            // Use a relative path so it works on GitHub Pages project sites
-            // (e.g., https://username.github.io/repo/) instead of only the root domain.
-            const swUrl = new URL('service-worker.js', window.location.href);
-            const scope = swUrl.pathname.replace(/service-worker\.js$/, '') || '/';
-
-            navigator.serviceWorker.register(swUrl.pathname, { scope })
+            navigator.serviceWorker.register('/service-worker.js')
                 .then((registration) => {
-                    console.log('Service Worker registered with scope:', registration.scope);
+                    console.log('✅ Service Worker registered with scope:', registration.scope);
                     
                     // Check for updates
                     registration.addEventListener('updatefound', () => {
@@ -541,7 +536,7 @@ function registerServiceWorker() {
                     });
                 })
                 .catch((error) => {
-                    console.error('Service Worker registration failed:', error);
+                    console.error('❌ Service Worker registration failed:', error);
                 });
         });
     }
