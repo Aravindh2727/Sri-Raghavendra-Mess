@@ -92,23 +92,17 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
       (async () => {
         try {
-          // FIXED: Properly handle preloadResponse with Promise.race
-          const preloadResponse = await Promise.race([
-            // Try to get preload response with timeout to prevent hanging
-            event.preloadResponse,
-            new Promise(resolve => setTimeout(resolve, 3000)) // 3 second timeout
-          ]);
-          
-          // If preload worked and we got a response, use it
+          // Use navigation preload if available; wait for it to settle to avoid cancellation warnings
+          const preloadResponse = await event.preloadResponse;
+
           if (preloadResponse) {
             console.log('[Service Worker] Using preloaded response for:', event.request.url);
             return preloadResponse;
           }
-          
+
           // Otherwise try network
-          console.log('[Service Worker] Preload failed, trying network for:', event.request.url);
-          const networkResponse = await fetch(event.request);
-          return networkResponse;
+          console.log('[Service Worker] No preload, trying network for:', event.request.url);
+          return await fetch(event.request);
           
         } catch (error) {
           console.log('[Service Worker] Network failed, using cache for:', event.request.url, error);
