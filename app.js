@@ -186,9 +186,9 @@ const menuData = [
     {
         id: 20,
         name: "Order for Festivals and Events",
-        price: 0,
+        price: -,
         client: "Bulk Order Client",
-        description: "Bulk order includes Pongal, Poori, Veg Biriyani, Tomato Rice, Masal Vadai, Idli, Dosa, Curd Rice, and Gulab Jamun, providing a complete combination of breakfast, lunch, snacks, and dessert items suitable for catering",
+        description: "We prepare food as per your needs for festivals, family functions, office events, and special occasions. You can choose your favorite items for breakfast, lunch, snacks, sweets, and drinks. We offer custom packages based on your taste, quantity, and budget.",
         category: "bulk",
         available: true,
         image: "https://i.pinimg.com/webp/736x/a2/60/99/a260995638f3e959468bc331e9f05894.webp"
